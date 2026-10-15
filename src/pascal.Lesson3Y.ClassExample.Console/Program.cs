@@ -10,8 +10,9 @@ namespace pascal.Lesson3E.ClassExample.UIConsole
         static void Main(string[] args)
         {
             try
-            {
+            {                
                 Vehicle vehicle1 = new Vehicle("xyz", -1, 50, 75);
+              
                 Console.WriteLine(vehicle1.LicensePlate);
                 Console.WriteLine(vehicle1.OdometerKm);
                 Console.WriteLine(vehicle1.DailyRate);

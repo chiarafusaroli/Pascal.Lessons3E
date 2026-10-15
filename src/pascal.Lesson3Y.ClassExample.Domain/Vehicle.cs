@@ -25,6 +25,8 @@ namespace pascal.Lesson3E.ClassExample.Domain
         private double _dailyRate;
         private double _fuelLevelPercentage;
 
+        public static int MaxFuelLevelPercentage { get; } = 100;
+
         public string LicensePlate 
         {
             get { return _licensePlate; } 
@@ -70,7 +72,7 @@ namespace pascal.Lesson3E.ClassExample.Domain
             { return _fuelLevelPercentage; }
             private set
             {
-                if (value < 0 || value > 100)
+                if (value < 0 || value > MaxFuelLevelPercentage)
                     throw new ArgumentException($"value not allowed {nameof(FuelLevelPercentage)}: {value} ");
                 
                 _fuelLevelPercentage = value;
